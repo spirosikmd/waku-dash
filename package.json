@@ -9,9 +9,13 @@
     "start": "waku start"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "clsx": "^2.1.1",
+    "promised-sqlite3": "^2.1.0",
     "react": "19.0.0-rc-7771d3a7-20240827",
     "react-dom": "19.0.0-rc-7771d3a7-20240827",
     "react-server-dom-webpack": "19.0.0-rc-7771d3a7-20240827",
+    "sqlite3": "^5.1.7",
     "waku": "0.21.1"
   },
   "devDependencies": {

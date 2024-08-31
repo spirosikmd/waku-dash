@@ -2,26 +2,18 @@ import '../styles.css';
 
 import type { ReactNode } from 'react';
 
-import { Header } from '../components/header';
-import { Footer } from '../components/footer';
-
 type RootLayoutProps = { children: ReactNode };
 
 export default async function RootLayout({ children }: RootLayoutProps) {
   const data = await getData();
 
   return (
-    <html>
-      <head></head>
-      <body>
-        <div className="font-['Nunito']">
+    <html lang="en">
+      <body className="font-['Nunito']">
+        <div>
           <meta property="description" content={data.description} />
           <link rel="icon" type="image/png" href={data.icon} />
-          <Header />
-          <main className="m-6 flex items-center *:min-h-64 *:min-w-64 lg:m-0 lg:min-h-svh lg:justify-center">
-            {children}
-          </main>
-          <Footer />
+          {children}
         </div>
       </body>
     </html>
@@ -30,7 +22,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
 const getData = async () => {
   const data = {
-    description: 'An internet website!',
+    description: 'A dashboard made with Waku!',
     icon: '/images/favicon.png',
   };
 
